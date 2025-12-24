@@ -19,8 +19,8 @@
 <script type="application/ld+json">
 {"description":Johyun An is a Product Manager specializing in generative AI and real-time decision systems, driving user engagement through strategic roadmaps and cross-functional collaboration. She studied Interactive Game Deign, Computer Science, and Pre-medical Science at the University of Utah. She is a lifelong learner, explorer, and interested in Human-Centered Computing with ethical strategies.","@type":"WebPage","url":"http://localhost:4000/projects.html","headline":"Projects","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="mainpf.css">
+<link rel="stylesheet" href="mainpf.css">
+    <link rel="stylesheet" href="design-system.css">
     <script src="jsscript.js"></script><link type="application/atom+xml" rel="alternate" href="https://localhost:4000/feed.xml" title="Johyun An" /><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113321077-1"></script>
 <script>
@@ -77,7 +77,7 @@
       </script>
     <div class="new-body"><header class="site-header">
 
-    <div class="wrapper"><a class="site-title" rel="author" href="/">
+    <div class="wrapper"><a class="site-title" rel="author" href="index.html">
         <img src="p_img/img06.png" width="30">
       </a><nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -89,7 +89,7 @@
             </span>
           </label>
   
-          <div class="trigger"><a class="page-link" href="index.html">About</a></a><a class="page-link" href="projects.html">Projects</a><a class="page-link" href="https://www.youtube.com/channel/UCROZagtb2jbq_1JZnfzzRSg" target="_blank">Vlog</a>
+          <div class="trigger"><a class="page-link" href="index.html">About</a></a><a class="page-link" href="projects.html">Projects</a><a class="page-link" href="https://www.youtube.com/channel/UCROZagtb2jbq_1JZnfzzRSg" target="_blank">YouTube</a>
             <a class="page-link" href="https://github.com/seran1001" target="_blank">GitHub</a>
             <a class="page-link" href="resume.pdf" target="_blank">Resume</a>
           </div>
@@ -103,29 +103,27 @@
 <style>
     /* Generate CSS filter rules */
 
-    #category-work:checked ~ #projects > .project:not(.category-work),
-    
-    #category-research:checked ~ #projects > .project:not(.category-research),
-    
-    #category-personal:checked ~ #projects > .project:not(.category-personal),
-    
-    #category-competition:checked ~ #projects > .project:not(.category-competition),
-    
-    #category-casestudy:checked ~ #projects > .project:not(.category-casestudy),
-    
+    #category-genai:checked ~ #projects > .project:not(.category-genai),
+
+    #category-llm:checked ~ #projects > .project:not(.category-llm),
+
+    #category-product:checked ~ #projects > .project:not(.category-product),
+
+    #category-healthcare:checked ~ #projects > .project:not(.category-healthcare),
+
     #category-game:checked ~ #projects > .project:not(.category-game),
-    
+
     dummy
     {
         display: none;
     }
     #category-all:checked ~ .filter-labels #label-category-all,
-    #category-research:checked ~ .filter-labels #label-category-research,
-    #category-personal:checked ~ .filter-labels #label-category-personal,
-    #category-competition:checked ~ .filter-labels #label-category-competition,
-    #category-casestudy:checked ~ .filter-labels #label-category-casestudy,
+    #category-genai:checked ~ .filter-labels #label-category-genai,
+    #category-llm:checked ~ .filter-labels #label-category-llm,
+    #category-product:checked ~ .filter-labels #label-category-product,
+    #category-healthcare:checked ~ .filter-labels #label-category-healthcare,
     #category-game:checked ~ .filter-labels #label-category-game,
-    
+
     dummy
     {
         background-color: #544b61;
@@ -137,15 +135,13 @@
 
 <input type="radio" name="category" id="category-all" checked="" />
 
-<input type="radio" name="category" id="category-work" />
+<input type="radio" name="category" id="category-genai" />
 
-<input type="radio" name="category" id="category-research" />
+<input type="radio" name="category" id="category-llm" />
 
-<input type="radio" name="category" id="category-personal" />
+<input type="radio" name="category" id="category-product" />
 
-<input type="radio" name="category" id="category-competition" />
-
-<input type="radio" name="category" id="category-casestudy" />
+<input type="radio" name="category" id="category-healthcare" />
 
 <input type="radio" name="category" id="category-game" />
 
@@ -155,14 +151,16 @@
         <div class="segmented-control">
             <label for="category-all" id="label-category-all">All</label>
 
-            <label for="category-work" id="label-category-casestudy">Work</label>
-            
-            <label for="category-research" id="label-category-research">Research</label>
-            
-            <label for="category-personal" id="label-category-personal">Personal</label>
-            
+            <label for="category-genai" id="label-category-genai">Gen AI</label>
+
+            <label for="category-llm" id="label-category-llm">LLM & RAG</label>
+
+            <label for="category-product" id="label-category-product">Product</label>
+
+            <label for="category-healthcare" id="label-category-healthcare">Healthcare AI</label>
+
             <label for="category-game" id="label-category-game">Game</label>
-            
+
         </div>
     </div>
 </div>
@@ -170,24 +168,24 @@
 
 
 <section id="projects">
-<div id="mir5" class="project  category-work ">
-    
+<div id="mir5" class="project  category-genai category-llm category-product category-game ">
+
     <span class="box-unvisible left"></span>
     <div class="box-visible featured">
         <h3><b>MIR5 </b></h3>
         <p>
             Innovating generative AI/RL-Powered Gaming Experiences
-            Developed NPC behaviors and dynamic character interaction systems using RL(Reinforcement Learning) 
+            Developed NPC behaviors and dynamic character interaction systems using RL(Reinforcement Learning)
         </p>
         <p><a>
-             PM; Research; Project Planning  
+             PM; Research; Project Planning
         </a></p>
         <div>
-            <small class="badge">work</small>    <small class="badge">WEMADE</small>  <small class="badge">game</small>
+            <small class="badge">Gen AI</small>    <small class="badge">LLM</small>  <small class="badge">Game</small>  <small class="badge">Product</small>
         </div>
     </div>
 </div>
-<div id="ionedocs" class="project  category-work ">
+<div id="ionedocs" class="project  category-product category-healthcare ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -195,21 +193,20 @@
     <div class="box-visible featured">
         <h3><b>I-one Docs</b></h3>
         <p>
-    
-          Worked on service planning and enhancement, competitive benchmarking for digital healthcare solutions like BEST Image, Backup and View, and I-Rapha View™. BEST Image is a clinical imaging management platform that visualizes medical imaging data and systematically collects and manages researchers' multidimensional evaluation results. 
-          It ensures data integrity by adhering to international medical data standards and can also be used as training data for AI research. I played a key role in refining the product’s vision and creating technical documentation to facilitate smooth communication between researchers and the development team. Additionally, I contributed to the advancement of Backup and View’s cloud-based, high-durability data management system and the feature enhancement and documentation of I-Rapha View™, a web-based DICOM viewer, ensuring the quality and reliability of these medical data management and viewing solutions.
+
+          Worked on service planning and enhancement, competitive benchmarking for digital healthcare solutions like BEST Image, Backup and View, and I-Rapha View™. BEST Image is a clinical imaging management platform that visualizes medical imaging data and systematically collects and manages researchers' multidimensional evaluation results.
+          It ensures data integrity by adhering to international medical data standards and can also be used as training data for AI research. I played a key role in refining the product's vision and creating technical documentation to facilitate smooth communication between researchers and the development team. Additionally, I contributed to the advancement of Backup and View's cloud-based, high-durability data management system and the feature enhancement and documentation of I-Rapha View™, a web-based DICOM viewer, ensuring the quality and reliability of these medical data management and viewing solutions.
         </p>
         <p><a>
-            PM; Research;   Documentation; 
+            PM; Research;   Documentation;
         </a></p>
         <div>
-            
-            <small class="badge">DICOM viewer</small> <small class="badge">document</small>  <small class="badge">Technical Writing</small>
-            <small class="badge">work</small>
+
+            <small class="badge">Healthcare AI</small> <small class="badge">Product</small>  <small class="badge">Technical Writing</small>
         </div>
     </div>
 </div>
-<div id="history" class="project  category-work ">
+<div id="history" class="project  category-genai category-product ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -221,17 +218,16 @@
 
         </p>
         <p><a>
-            HCI;    UX Design; 
+            HCI;    UX Design;
         </a></p>
         <div>
-            
-            <small class="badge">Mobile App UX</small> <small class="badge">UI Design</small>  <small class="badge">Figma</small>
-            <small class="badge">work</small>
+
+            <small class="badge">Gen AI</small> <small class="badge">Product</small>  <small class="badge">UX Design</small>
         </div>
     </div>
 </div>
 
-<div id="kohi" class="project  category-work ">
+<div id="kohi" class="project  category-healthcare category-product ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -239,20 +235,20 @@
     <div class="box-visible featured">
         <h3><b>KOHI - AI for Healthcare Program</b></h3>
         <p>
-        Created an educational courses that provide doctors with the Machine Learning, Programming knowledge and 
+        Created an educational courses that provide doctors with the Machine Learning, Programming knowledge and
         </p>
         <p><a>
              Medicine; Healthcare; Education;
         </a></p>
         <div>
-            
-            <small class="badge">project mangement</small>
-            
+
+            <small class="badge">Healthcare AI</small>  <small class="badge">Product</small>
+
         </div>
     </div>
 </div>
 
-<div id="medicalapp" class="project  category-research ">
+<div id="medicalapp" class="project  category-healthcare ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -263,15 +259,15 @@
             Analysis of the Diabetes app for the timely self-managing treatment of Type 2 Diabetes patients
         </p>
         <p><a>
-             Research; Healthcare; 
+             Research; Healthcare;
         </a></p>
         <div>
-            <small class="badge">research</small>
+            <small class="badge">Healthcare AI</small>
         </div>
     </div>
 </div>
 
-<div id="diabecare72" class="project  category-game ">
+<div id="diabecare72" class="project  category-healthcare category-game ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -279,22 +275,22 @@
     <div class="box-visible ">
         <h3><b>Blood and Sugar</b></h3>
         <p>
-             Improving player's knowledge of self managing type 2 diabetes by guiding them to make better decisions with food and exercise. 
+             Improving player's knowledge of self managing type 2 diabetes by guiding them to make better decisions with food and exercise.
             *Player will acknowledge the importance of controlling the rising level of cholesterol and accumulation of neutral fats in blood vessels which cause a serious risk for heart disease and stroke.
 
         </p>
         <p><a>
-             medical;    health educational game 
+             medical;    health educational game
         </a></p>
         <div>
-            
-            <small class="badge">game</small>
-            
+
+            <small class="badge">Healthcare AI</small>  <small class="badge">Game</small>
+
         </div>
     </div>
 </div>
 
-<div id="uxfactory" class="project  category-work ">
+<div id="uxfactory" class="project  category-product ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -306,19 +302,19 @@
             As a UX Engineer / Data security specialist Intern
         </p>
         <p><a>
-             startup; intern; 
+             startup; intern;
         </a></p>
         <div>
-            
-            <small class="badge">research</small>
-            
+
+            <small class="badge">Product</small>
+
         </div>
     </div>
 </div>
 
 
 
-<div id="gameUR" class="project  category-research ">
+<div id="gameUR" class="project  category-game category-product ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -333,9 +329,9 @@
              casestudy; game UX research
         </a></p>
         <div>
-            
-            <small class="badge">case study</small>
-            
+
+            <small class="badge">Game</small>  <small class="badge">Product</small>
+
         </div>
     </div>
 </div>
@@ -354,9 +350,9 @@
              pc adventure game
         </a></p>
         <div>
-            
-            <small class="badge">game</small>
-            
+
+            <small class="badge">Game</small>
+
         </div>
     </div>
 </div>
@@ -376,15 +372,15 @@
              multi-platformer game
         </a></p>
         <div>
-            
-            <small class="badge">game</small>
-            
+
+            <small class="badge">Game</small>
+
         </div>
     </div>
 </div>
 
 
-<div id="ravi" class="project  category-personal ">
+<div id="ravi" class="project  category-product ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -395,15 +391,15 @@
             How to build a better interaction of a website while users doing a live chat?
         </p>
         <p><a>
-             web development;  UX;  sensemaking  
+             web development;  UX;  sensemaking
         </a></p>
         <div>
-            <small class="badge">research</small>
+            <small class="badge">Product</small>
         </div>
     </div>
 </div>
 
-<div id="neurogrow" class="project  category-competition ">
+<div id="neurogrow" class="project  category-healthcare category-game ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -414,16 +410,16 @@
             A therapeutic game improving executive function in geriatric patient
         </p>
         <p><a>
-             medical game; healthcare; mobile app 
+             medical game; healthcare; mobile app
         </a></p>
         <div>
-            
-            <small class="badge">research</small>
-            <small class="badge">competition</small>
+
+            <small class="badge">Healthcare AI</small>
+            <small class="badge">Game</small>
         </div>
     </div>
 </div>
-<div id="hackathonpj" class="project  category-personal  category-competition ">
+<div id="hackathonpj" class="project  category-healthcare ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -434,16 +430,15 @@
            Hackathon Project
         </p>
         <p><a>
-             startup; 
+             startup;
         </a></p>
         <div>
-            <small class="badge">personal</small>
-            <small class="badge">competition</small>
+            <small class="badge">Healthcare AI</small>
         </div>
     </div>
 </div>
 
-<div id="eae" class="project  category-personal  category-game ">
+<div id="eae" class="project  category-game ">
     <span class="box-unvisible top"></span>
     <span class="box-unvisible right"></span>
     <span class="box-unvisible bottom"></span>
@@ -457,8 +452,7 @@
              Adobe Photoshop; Unreal; Unity
         </a></p>
         <div>
-            <small class="badge">personal</small>
-            <small class="badge">competition</small>
+            <small class="badge">Game</small>
         </div>
     </div>
 </div>
